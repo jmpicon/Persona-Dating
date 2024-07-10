@@ -1,0 +1,125 @@
+2024-07-07 16:53:55,166 ERROR: Exception on / [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app/routes/main.py", line 14, in home
+    return render_template('index.html')
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 127, in _render
+    app.update_template_context(context)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 493, in update_template_context
+    context.update(self.ensure_sync(func)())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 405, in _user_context_processor
+    return dict(current_user=_get_user())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.9/site-packages/flask_login/login_manager.py", line 347, in _load_user
+    raise Exception(
+Exception: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2024-07-07 16:54:02,420 ERROR: Exception on / [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app/routes/main.py", line 14, in home
+    return render_template('index.html')
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 127, in _render
+    app.update_template_context(context)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 493, in update_template_context
+    context.update(self.ensure_sync(func)())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 405, in _user_context_processor
+    return dict(current_user=_get_user())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.9/site-packages/flask_login/login_manager.py", line 347, in _load_user
+    raise Exception(
+Exception: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2024-07-07 18:36:34,083 ERROR: Exception on / [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app/routes/main.py", line 14, in home
+    return render_template('index.html')
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 127, in _render
+    app.update_template_context(context)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 493, in update_template_context
+    context.update(self.ensure_sync(func)())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 405, in _user_context_processor
+    return dict(current_user=_get_user())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.9/site-packages/flask_login/login_manager.py", line 347, in _load_user
+    raise Exception(
+Exception: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2024-07-07 18:52:08,775 ERROR: Exception on / [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app/routes/main.py", line 14, in home
+    return render_template('index.html')
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 127, in _render
+    app.update_template_context(context)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 493, in update_template_context
+    context.update(self.ensure_sync(func)())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 405, in _user_context_processor
+    return dict(current_user=_get_user())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.9/site-packages/flask_login/login_manager.py", line 347, in _load_user
+    raise Exception(
+Exception: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+2024-07-09 13:31:12,958 ERROR: Exception on / [GET] [in /usr/local/lib/python3.9/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/app/app/routes/main.py", line 14, in home
+    return render_template('index.html')
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.9/site-packages/flask/templating.py", line 127, in _render
+    app.update_template_context(context)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 493, in update_template_context
+    context.update(self.ensure_sync(func)())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 405, in _user_context_processor
+    return dict(current_user=_get_user())
+  File "/usr/local/lib/python3.9/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.9/site-packages/flask_login/login_manager.py", line 347, in _load_user
+    raise Exception(
+Exception: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
