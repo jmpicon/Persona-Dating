@@ -1,7 +1,10 @@
 from flask import Blueprint, render_template, request, redirect, url_for, jsonify
 import os
-from app.utils.pdf_to_csv import pdf_to_csv
-from app.utils.chatbot import get_response
+from app.utils.pdf_to_text import pdf_to_text
+from app.utils.filter_text import filter_text
+from app.utils.update_model import fine_tune_model
+from app.utils.chatbot import update_chatbot_model, get_response
+from app.models import db, Interaction
 
 main = Blueprint('main', __name__)
 
@@ -23,9 +26,11 @@ def upload_file():
             return redirect(request.url)
         if file:
             pdf_path = os.path.join(UPLOAD_FOLDER, file.filename)
-            csv_path = pdf_path.replace('.pdf', '.csv')
             file.save(pdf_path)
-            pdf_to_csv(pdf_path, csv_path)
+            extracted_text = pdf_to_text(pdf_path)
+            filtered_text = filter_text(extracted_text)
+            fine_tune_model(filtered_text)
+            update_chatbot_model()
             return redirect(url_for('main.home'))
     return '''
     <!doctype html>
@@ -41,5 +46,7 @@ def upload_file():
 def chat():
     user_input = request.json.get('message')
     response = get_response(user_input)
+    interaction = Interaction(user_id=1, question=user_input, response=response)  # Suponiendo user_id=1 para simplificar
+    db.session.add(interaction)
+    db.session.commit()
     return jsonify({'response': response})
-

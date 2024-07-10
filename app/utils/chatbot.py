@@ -1,7 +1,9 @@
 from transformers import pipeline
+import os
 
-chatbot = pipeline('text-generation', model='gpt2')
+def update_chatbot_model():
+    global chatbot
+    model_path = "fine_tuned_model" if os.path.exists("fine_tuned_model") else "gpt2"
+    chatbot = pipeline('text-generation', model=model_path)
 
-def get_response(user_input):
-    response = chatbot(user_input, max_length=50, num_return_sequences=1)
-    return response[0]['generated_text']
+update_chatbot_model()
