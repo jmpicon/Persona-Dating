@@ -1,2 +1,2 @@
-flask
-transformers
+Flask==2.1.2
+ollama==0.1.0  # Ejemplo de versión, ajusta según sea necesario

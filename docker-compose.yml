@@ -14,15 +14,16 @@ services:
     build: ./Persona-Dating-back
     ports:
       - "5001:5001"
+    command: python app/pdf_processing.py
 
   chatbot-service:
     build: ./Persona-Dating-ai
     ports:
       - "5002:5002"
+    command: python app/ai_service.py
 
   model-training-service:
     build: ./Persona-Dating-back
     command: python app/model_training.py
     ports:
       - "5003:5003"
-
