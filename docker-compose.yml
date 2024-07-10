@@ -1,12 +1,27 @@
-version: '3.8'
+version: '3'
 
 services:
-  web:
-    build: .
+  web-app:
+    build: ./Persona-Dating-web
     ports:
       - "5000:5000"
-    volumes:
-      - .:/app
-    environment:
-      FLASK_ENV: development
-      FLASK_APP: app:create_app
+    depends_on:
+      - pdf-processing-service
+      - chatbot-service
+      - model-training-service
+
+  pdf-processing-service:
+    build: ./Persona-Dating-back
+    ports:
+      - "5001:5001"
+
+  chatbot-service:
+    build: ./Persona-Dating-ai
+    ports:
+      - "5002:5002"
+
+  model-training-service:
+    build: ./Persona-Dating-back
+    command: python model_training.py
+    ports:
+      - "5003:5003"
